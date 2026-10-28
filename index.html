@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panjatan Shop | Premium Clothing Shop in Dhanbad</title>
+    <meta name="description" content="Visit Panjatan Shop in Purana Bazar, Dhanbad for a premium selection of everyday clothing including t-shirts, jeans, trousers, half pants, and socks. Owned by Haider Ali.">
+    <meta name="keywords" content="Panjatan Shop, clothing shop in Dhanbad, menswear, t-shirts, jeans, trousers, Purana Bazar Dhanbad, Haider Ali, Panjatan Shop Dhanbad">
+    <meta name="author" content="Haider Ali">
+    
+    <!-- Open Graph tags for better sharing on WhatsApp, Facebook, etc. -->
+    <meta property="og:title" content="Panjatan Shop | Clothing Shop in Dhanbad">
+    <meta property="og:description" content="Discover premium everyday wear at Panjatan Shop, located in Purana Bazar, Dhanbad.">
+    <meta property="og:type" content="website">
+
+    <!-- Importing Inter as the closest web-safe fallback for SF Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            /* Colors */
+            --color-apple-blue: #0071e3;
+            --color-link-blue: #0066cc;
+            --color-signal-blue: #2997ff;
+            --color-carbon: #1d1d1f;
+            --color-frost: #f5f5f7;
+            --color-ice: #f4f8fb;
+            --color-smoke: #333333;
+            --color-graphite: #474747;
+            --color-ash: #707070;
+            --color-mist: #858585;
+            --color-onyx: #000000;
+            --color-pebble: #e2e2e5;
+
+            /* Typography — Font Families */
+            --font-sf-pro-display: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-sf-pro-text: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+            /* Typography — Scale */
+            --text-caption: 12px;
+            --leading-caption: 1.33;
+            --tracking-caption: -0.264px;
+            
+            --text-body-sm: 14px;
+            --leading-body-sm: 1.29;
+            --tracking-body-sm: -0.224px;
+            
+            --text-body: 17px;
+            --leading-body: 1.47;
+            --tracking-body: -0.272px;
+            
+            --text-subheading: 21px;
+            --leading-subheading: 1.24;
+            --tracking-subheading: -0.105px;
+            
+            --text-heading-sm: 28px;
+            --leading-heading-sm: 1.18;
+            --tracking-heading-sm: 0.196px;
+            
+            --text-heading: 40px;
+            --leading-heading: 1.14;
+            --tracking-heading: 0.44px;
+            
+            --text-heading-lg: 44px;
+            --leading-heading-lg: 1.18;
+            --tracking-heading-lg: -0.44px;
+            
+            --text-display: 56px;
+            --leading-display: 1.07;
+            --tracking-display: 0.616px;
+
+            /* Spacing */
+            --spacing-unit: 4px;
+            --spacing-4: 4px;
+            --spacing-8: 8px;
+            --spacing-12: 12px;
+            --spacing-16: 16px;
+            --spacing-20: 20px;
+            --spacing-24: 24px;
+            --spacing-40: 40px;
+            --spacing-48: 48px;
+            --spacing-56: 56px;
+            --section-gap: 64px;
+
+            /* Border Radius */
+            --radius-cards: 8px;
+            --radius-buttons: 980px;
+
+            /* Shadows */
+            --shadow-xl: rgba(0, 0, 0, 0.22) 3px 5px 30px 0px;
+        }
+
+        body {
+            font-family: var(--font-sf-pro-text);
+            background-color: var(--color-frost);
+            color: var(--color-carbon);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography Classes */
+        .text-display-style {
+            font-family: var(--font-sf-pro-display);
+            font-size: var(--text-display);
+            line-height: var(--leading-display);
+            letter-spacing: var(--tracking-display);
+            font-weight: 600;
+            color: var(--color-carbon);
+        }
+
+        .text-subtitle-style {
+            font-family: var(--font-sf-pro-text);
+            font-size: 26px; /* Custom intermediate size based on Apple prompt */
+            font-weight: 300;
+            color: var(--color-carbon);
+            letter-spacing: -0.016em;
+        }
+
+        /* Components */
+        .global-nav {
+            background-color: var(--color-carbon);
+            padding: var(--spacing-8) var(--spacing-20);
+            border-bottom: 1px solid var(--color-smoke);
+        }
+
+        .nav-link {
+            font-size: var(--text-caption);
+            font-weight: 400;
+            color: var(--color-frost);
+            text-decoration: none;
+            letter-spacing: var(--tracking-caption);
+        }
+
+        .btn-filled {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-apple-blue);
+            color: var(--color-ice);
+            font-size: var(--text-body);
+            font-weight: 400;
+            border-radius: var(--radius-buttons);
+            padding: 11px 15px;
+            text-decoration: none;
+            border: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-filled:hover {
+            opacity: 0.9;
+        }
+
+        .btn-outlined {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: var(--color-link-blue);
+            font-size: var(--text-body);
+            font-weight: 400;
+            border-radius: var(--radius-buttons);
+            padding: 11px 15px;
+            text-decoration: none;
+            border: 1px solid var(--color-link-blue);
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .btn-outlined:hover {
+            background-color: var(--color-link-blue);
+            color: white;
+        }
+
+        .btn-small {
+            font-size: var(--text-body-sm);
+            padding: 8px 15px;
+            background-color: var(--color-apple-blue);
+            color: white;
+            border-radius: var(--radius-buttons);
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .hero-section {
+            padding-top: var(--section-gap);
+            background-color: var(--color-frost);
+            text-align: center;
+            width: 100%;
+        }
+
+        .hero-image-container {
+            margin-top: var(--spacing-40);
+            width: 100%;
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 var(--spacing-20);
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: var(--radius-cards);
+            box-shadow: var(--shadow-xl);
+            display: block;
+        }
+
+        /* Product Cards Grid */
+        .product-grid-section {
+            padding: var(--section-gap) var(--spacing-20);
+            background-color: var(--color-frost);
+            max-width: var(--page-max-width);
+            margin: 0 auto;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-24);
+        }
+
+        .service-card {
+            position: relative;
+            height: 400px;
+            border-radius: var(--radius-cards);
+            overflow: hidden;
+            background-color: var(--color-onyx); /* Fallback */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: var(--spacing-24);
+            text-decoration: none;
+        }
+
+        .service-card img.bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.8;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover img.bg-image {
+            transform: scale(1.03);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: var(--text-heading-sm);
+            font-weight: 600;
+            color: #ffffff;
+            line-height: var(--leading-heading-sm);
+        }
+        
+        .card-subtitle {
+            font-size: var(--text-caption);
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: var(--spacing-4);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--color-frost);
+            padding: var(--section-gap) var(--spacing-20);
+            border-top: 1px solid var(--color-mist);
+        }
+
+        .footer-content {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-24);
+        }
+        
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .footer-heading {
+            font-size: var(--text-caption);
+            font-weight: 600;
+            color: var(--color-carbon);
+            margin-bottom: var(--spacing-12);
+        }
+
+        .footer-text {
+            font-size: var(--text-caption);
+            font-weight: 400;
+            color: var(--color-ash);
+            line-height: 1.5;
+        }
+
+        .footer-link {
+            color: var(--color-link-blue);
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .hairline-divider {
+            height: 1px;
+            background-color: var(--color-mist);
+            margin: var(--spacing-24) 0;
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        /* Utility */
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gap-12 {
+            gap: var(--spacing-12);
+        }
+        
+        .gap-16 {
+            gap: var(--spacing-16);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: transform, opacity;
+        }
+
+        /* Responsive Adjustments for Mobile and Tablet */
+        @media (max-width: 768px) {
+            :root {
+                --text-display: 40px;
+                --section-gap: 40px;
+            }
+            .text-subtitle-style {
+                font-size: 20px;
+            }
+            .hero-image-container {
+                margin-top: var(--spacing-24);
+            }
+            .global-nav {
+                padding: var(--spacing-12);
+            }
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Global Nav Bar -->
+    <nav class="global-nav flex flex-col md:flex-row items-center justify-between sticky top-0 z-50 gap-2 md:gap-0">
+        <div class="flex items-center">
+            <a href="#" class="nav-link font-semibold text-white text-sm tracking-wide">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 mb-0.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                Panjatan Shop
+            </a>
+        </div>
+        <div class="flex items-center w-full md:w-auto justify-center md:justify-end text-center">
+            <a href="#location" class="nav-link text-xs md:text-sm">
+                Shop G13, G21A, Purana Bazar, Dhanbad, Jharkhand
+            </a>
+        </div>
+    </nav>
+
+    <!-- Product Hero Section -->
+    <header class="hero-section flex flex-col items-center">
+        <h1 class="text-display-style px-4 animate-fade-up text-center">Panjatan Shop</h1>
+        <p class="text-subtitle-style mt-2 mb-8 px-4 text-center">Elevated style for everyday wear.</p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 px-4 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto">
+            <a href="#collection" class="btn-filled w-full sm:w-auto">Shop Collection</a>
+            <a href="tel:8340190656" class="btn-outlined w-full sm:w-auto">Call Haider</a>
+        </div>
+
+        <div class="hero-image-container">
+            <!-- Large aesthetic hero image -->
+            <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=2070" 
+                 alt="Premium clothing selection at Panjatan Shop" 
+                 class="hero-image">
+        </div>
+    </header>
+
+    <!-- Product Card Grid (Service Card Grid style) -->
+    <section id="collection" class="product-grid-section">
+        <div class="cards-container">
+            
+            <!-- Category: T-Shirts -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800" alt="T-Shirts" class="bg-image">
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">T-Shirts</h3>
+                        <p class="card-subtitle">Everyday essentials</p>
+                    </div>
+                    <div>
+                        <a href="#tshirts" class="btn-small">View T-Shirts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Jeans -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&q=80&w=800" alt="Jeans" class="bg-image">
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Jeans</h3>
+                        <p class="card-subtitle">Premium denim collection</p>
+                    </div>
+                    <div>
+                        <a href="#jeans" class="btn-small">View Jeans</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Trousers -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&q=80&w=800" alt="Trousers" class="bg-image">
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Trousers</h3>
+                        <p class="card-subtitle">Tailored for comfort</p>
+                    </div>
+                    <div>
+                        <a href="#trousers" class="btn-small">View Trousers</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Half Pants -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&q=80&w=800" alt="Half Pants" class="bg-image">
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Half Pants</h3>
+                        <p class="card-subtitle">Casual & breezy</p>
+                    </div>
+                    <div>
+                        <a href="#halfpants" class="btn-small">View Half Pants</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Socks -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?auto=format&fit=crop&q=80&w=800" alt="Socks" class="bg-image">
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">Socks</h3>
+                        <p class="card-subtitle">Comfort from the ground up</p>
+                    </div>
+                    <div>
+                        <a href="#socks" class="btn-small">View Socks</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Contact Block -->
+    <footer id="location" class="site-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="footer-heading">Contact Owner</h4>
+                    <p class="footer-text mb-2" style="font-weight: 600; font-size: var(--text-body); color: var(--color-carbon);">Haider Ali</p>
+                    <a href="tel:8340190656" class="footer-link text-lg font-medium" style="font-size: var(--text-subheading); color: var(--color-carbon);">
+                        +91 83401 90656
+                    </a>
+                    <p class="footer-text mt-4">Available during shop hours for inquiries and orders.</p>
+                </div>
+
+                <!-- Location Info -->
+                <div>
+                    <h4 class="footer-heading">Visit Us</h4>
+                    <p class="footer-text">
+                        Panjatan Shop<br>
+                        Shop No. G13, G21A<br>
+                        Purana Bazar<br>
+                        Dhanbad, Jharkhand<br>
+                        India
+                    </p>
+                    <a href="https://maps.google.com/?q=Purana+Bazar,+Dhanbad,+Jharkhand" target="_blank" class="footer-link mt-4 inline-block text-sm">
+                        Open in Maps ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hairline-divider"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+                <p class="footer-text text-xs">
+                    &copy; 2026 Panjatan Shop. All rights reserved.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="footer-text footer-link text-xs">Privacy Policy</a>
+                    <a href="#" class="footer-text footer-link text-xs">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
